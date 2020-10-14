@@ -1,0 +1,1879 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url("./assets/cover.png");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  min-height: 780px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 0 10%;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.navbar__logo {
+  height: 55px;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 100%;
+  margin-left: auto;
+  color: #120203;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.navbar__item:hover {
+  border-bottom: 7px solid #fff581;
+}
+
+.navbar .navbar__menuIcon {
+  display: none;
+  margin: 0 10px 0 auto;
+  font-size: 4.5rem;
+  color: #000;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(-100%);
+  background-color: #fff581;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.mobileNav_active {
+  transform: translateY(0);
+}
+
+.mobileNav__closeIcon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 4rem;
+  color: #000;
+}
+
+.mobileNav__item {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.mobileNav__item:hover {
+  text-decoration: underline;
+}
+
+.home__title {
+  font-family: "Mr Dafoe", cursive;
+  font-size: 10rem;
+  font-weight: lighter;
+  color: #ed2024;
+  text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff,
+    -3px -3px 0 #fff, 0px 3px 0 #fff, 0px -3px 0 #fff, -3px 0px 0 #fff,
+    3px 0px 0 #fff, 2px 2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff,
+    -4px -4px 0 #fff, 0px 4px 0 #fff, 0px -4px 0 #fff, -4px 0px 0 #fff,
+    4px 0px 0 #fff, 3px 4px 0 #fff, -3px 4px 0 #fff, 3px -4px 0 #fff,
+    -3px -4px 0 #fff, 4px 3px 0 #fff, -4px 3px 0 #fff, 4px -3px 0 #fff,
+    -4px -1px 0 #fff;
+}
+
+.home__subtitle {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+.home__arrowIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  color: #fff;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.home__arrowIcon_right {
+  right: 10%;
+}
+
+.home__arrowIcon_left {
+  left: 10%;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 55vh;
+  min-height: 420px;
+  padding: 0 15%;
+}
+
+.reservation__title {
+  color: #f01b16;
+  font-size: 4rem;
+  letter-spacing: 1.74px;
+  text-transform: uppercase;
+}
+
+.reservation__title_marked {
+  font-family: "Mr Dafoe", cursive;
+  color: #f01b16;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.reservation__content {
+  color: #9f9a97;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.reservation__button {
+  width: 240px;
+  height: 60px;
+  border: none;
+  background-color: #ff7e66;
+  cursor: pointer;
+}
+
+.reservation__buttonLabel {
+  color: #fff2ee;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.74px;
+}
+
+.promotion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  min-height: 585px;
+}
+
+.promotion__img {
+  width: 50%;
+  height: 100%;
+  background-image: url("./assets/promo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.promotion__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  background-color: #fff2ed;
+}
+
+.promotion__contentTitle {
+  padding: 0 30%;
+  color: #ff7e66;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4.9px;
+}
+
+.promotion__contentImg {
+  width: 150px;
+  margin: 25px 0;
+}
+
+.promotion__contentText {
+  padding: 0 20%;
+  color: #9f9a97;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 1.96px;
+}
+
+.fullMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 62vh;
+  min-height: 380px;
+}
+
+.fullMenu__title {
+  color: #f01b16;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.fullMenu__title_marked {
+  color: #f01b16;
+  font-size: 5.5rem;
+  font-family: "Mr Dafoe", cursive;
+  background-color: transparent;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.fullMenu__content {
+  margin: 40px 0;
+  padding: 0 12.5%;
+  color: #9f9a97;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.fullMenu__button {
+  width: 239px;
+  height: 60px;
+  border: none;
+  background-color: #ff7e66;
+  cursor: pointer;
+}
+
+.fullMenu__buttonLabel {
+  color: #fff2ee;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.75px;
+}
+
+.sampleProduct {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 85vh;
+  min-height: 600px;
+  background-image: url("./assets/sample-product.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.sampleProduct__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 45%;
+  height: 100%;
+}
+
+.sampleProduct__name {
+  padding-right: 40%;
+  line-height: 100px;
+  color: #f01b16;
+  font-size: 10rem;
+  font-family: "Mr Dafoe", cursive;
+  text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, 3px -3px 0 #fff,
+    -3px -3px 0 #fff, 0px 3px 0 #fff, 0px -3px 0 #fff, -3px 0px 0 #fff,
+    3px 0px 0 #fff, 2px 2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff,
+    -4px -4px 0 #fff, 0px 4px 0 #fff, 0px -4px 0 #fff, -4px 0px 0 #fff,
+    4px 0px 0 #fff, 3px 4px 0 #fff, -3px 4px 0 #fff, 3px -4px 0 #fff,
+    -3px -4px 0 #fff, 4px 3px 0 #fff, -4px 3px 0 #fff, 4px -3px 0 #fff,
+    -4px -1px 0 #fff;
+  letter-spacing: 8.71px;
+}
+
+.sampleProduct__description {
+  padding-right: 30%;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.sampleProduct__price {
+  color: #ffffff;
+  font-family: "Mr Dafoe", cursive;
+  font-size: 5rem;
+  letter-spacing: 5px;
+}
+
+.sampleProduct__button {
+  width: 150px;
+  height: 61px;
+  border: 2px solid #fff;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sampleProduct__buttonLabel {
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.sampleProduct__arrowIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  color: #fff;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.sampleProduct__arrowIcon_right {
+  right: 7.5%;
+}
+
+.sampleProduct__arrowIcon_left {
+  left: 7.5%;
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 25vh;
+  min-height: 185px;
+  padding: 0 8%;
+}
+
+.services__item {
+  text-align: center;
+}
+
+.services__itemImg {
+  margin-bottom: 20px;
+}
+
+.services__itemCaption {
+  color: #120203;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.services__divider {
+  height: 40%;
+  width: 2px;
+  background-color: #000;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  min-height: 670px;
+}
+
+.gallery__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+}
+
+.gallery__row_second {
+  flex-direction: row-reverse;
+}
+
+.gallery__imgField {
+  background-size: cover;
+  background-position: center;
+  width: 25%;
+  height: 100%;
+}
+
+.gallery__imgField_1 {
+  background-image: url("./assets/gallery-1.png");
+}
+
+.gallery__imgField_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff2ed;
+}
+
+.gallery__imgField_3 {
+  background-image: url("./assets/gallery-2.png");
+}
+
+.gallery__imgField_4 {
+  background-image: url("./assets/gallery-5.png");
+}
+
+.gallery__imgField_5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/gallery-4.png");
+}
+
+.gallery__imgField_6 {
+  background-image: url("./assets/gallery-3.png");
+}
+
+.gallery__imgField:nth-child(3) {
+  width: 50%;
+}
+
+.gallery__title {
+  color: #ff7e66;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.gallery__imageOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 75px);
+  height: calc(100% - 75px);
+  background-color: #4c0d0b;
+  opacity: 0.94;
+}
+
+.gallery__imageOverlayLabel {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  min-height: 800px;
+}
+
+.blog__title {
+  color: #f01b16;
+  font-size: 4rem;
+}
+
+.blog__title_marked {
+  background-color: transparent;
+  color: #f01b16;
+  font-family: "Mr Dafoe", cursive;
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.blog__text {
+  margin: 60px 0;
+  padding: 0 20%;
+  color: #9f9a97;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.blog__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 40vh;
+  min-height: 325px;
+}
+
+.blog__contentItem {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.blog__contentItem:hover .blog__contentItemCaption {
+  width: 425px;
+  height: 425px;
+}
+
+.blog__contentItem:hover .blog__contentItemButton {
+  display: block;
+}
+
+.blog__contentItem:nth-child(1) {
+  background-image: url("./assets/blog-1.png");
+}
+
+.blog__contentItem:nth-child(2) {
+  background-image: url("./assets/blog-2.png");
+}
+
+.blog__contentItem:nth-child(3) {
+  background-image: url("./assets/blog-3.png");
+}
+
+.blog__contentItem:nth-child(4) {
+  background-image: url("./assets/blog-4.png");
+  background-position-x: 80%;
+}
+
+.blog__contentItemCaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 330px;
+  height: 330px;
+  padding-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 6px 5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  color: #000;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 40.1px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.blog__contentItemCaption_marked {
+  background-color: transparent;
+  color: #f01b16;
+  font-family: "Mr Dafoe", cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.blog__contentItemButton {
+  display: none;
+  width: 90px;
+  height: 38px;
+  margin-top: 40px;
+  border: none;
+  background-color: #ff7e66;
+  cursor: pointer;
+}
+
+.blog__contentItemButtonLabel {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 40.1px;
+  text-transform: uppercase;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  min-height: 800px;
+  background-image: url("./assets/contact-background.png");
+  background-position: center;
+  background-size: cover;
+  padding: 0 15%;
+}
+
+.contact__title {
+  margin-bottom: 70px;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.contact__form {
+  width: 100%;
+  height: 50%;
+}
+
+.contact__title_marked {
+  color: #fff;
+  font-family: "Mr Dafoe", cursive;
+  font-size: 5.5rem;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.contact__inputsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact__input {
+  padding: 0 20px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 167.64px;
+  letter-spacing: 0.13px;
+}
+
+.contact__input::placeholder {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 167.64px;
+}
+
+.contact__input_small {
+  height: 55px;
+  width: 31%;
+}
+
+.contact__input_big {
+  width: 100%;
+  height: 255px;
+  margin: 40px 0;
+}
+
+.contact__button {
+  width: 100%;
+  height: 72px;
+  border: none;
+  background-color: #ff7d66;
+}
+
+.contact__buttonLabel {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+}
+
+.contactDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+  min-height: 320px;
+  background-color: #fff2ed;
+}
+
+.contactDetails__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: 80%;
+}
+
+.contactDetails__item {
+  height: 100%;
+  width: 30%;
+}
+
+.contacDetails__itemPhoto {
+  position: relative;
+  height: 55%;
+}
+
+.contactDetails__itemImg {
+  height: 100%;
+  width: 100%;
+}
+
+.contactDetails__itemIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 5rem;
+}
+
+.contactDetails__itemInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20%;
+  height: 45%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
+.contactDetails__itemName {
+  margin-bottom: 20px;
+  color: #464646;
+  font-size: 1.6rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.64px;
+}
+
+.contactDetails__itemDetails {
+  color: #81868e;
+  font-size: 1.4rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+
+.location {
+  position: relative;
+  height: 60vh;
+  min-height: 325px;
+}
+
+.location__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.location__mapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.location__mapLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 32.26px;
+  text-transform: uppercase;
+  z-index: 101;
+  cursor: pointer;
+}
+
+.location__mapLabel_marked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 7px;
+  border-radius: 50%;
+  background-color: #f01b16;
+  color: #fff;
+  font-family: "Mr Dafoe", cursive;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 2.3rem;
+  text-transform: capitalize;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  min-height: 200px;
+}
+
+.footer__title {
+  color: #f01b16;
+  font-family: "Mr Dafoe", cursive;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 3px;
+}
+
+.footer__copyright {
+  margin: 40px 0 20px 0;
+  color: #81868e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.7px;
+}
+
+.footer__socialMedias {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
+}
+
+.footer__iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.footer__iconCircle:nth-child(1) {
+  background-color: #3b5998;
+}
+
+.footer__iconCircle:nth-child(2) {
+  background-color: #26a6d1;
+}
+
+.footer__iconCircle:nth-child(3) {
+  background-color: #0e76a8;
+}
+
+.footer__iconCircle:nth-child(4) {
+  background-color: #3f729b;
+}
+
+.footer__iconCircle:nth-child(5) {
+  background-color: #86c9ef;
+}
+
+.footer__icon {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.mobileNavbar {
+  display: none;
+}
+
+@media (max-width: 1720px) {
+  .contactDetails__itemInfo {
+    padding: 0 17.5%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .navbar__items {
+    width: 85%;
+  }
+
+  .promotion__contentTitle {
+    padding: 0 25%;
+  }
+
+  .contactDetails__items {
+    width: 60%;
+  }
+
+  .footer__socialMedias {
+    width: 12.5%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .navbar {
+    padding: 0 3% 0 10%;
+  }
+
+  .navbar__item {
+    font-size: 1.6rem;
+  }
+
+  .promotion__contentTitle {
+    font-size: 4rem;
+  }
+
+  .promotion__contentText {
+    padding: 0 15%;
+  }
+
+  .contactDetails__itemInfo {
+    padding: 0 12.5%;
+  }
+}
+
+@media (max-width: 1280px) {
+  * {
+    font-size: 9px;
+  }
+
+  .home__title {
+    font-size: 9rem;
+  }
+
+  .promotion__contentTitle {
+    padding: 0 20%;
+  }
+
+  .promotion__contentText {
+    padding: 0 10%;
+  }
+
+  .sampleProduct__name {
+    padding-right: 35%;
+  }
+
+  .gallery__title {
+    font-size: 3.5rem;
+  }
+
+  .gallery__imageOverlayLabel {
+    font-size: 4.5rem;
+  }
+
+  .blog__contentItemCaption {
+    font-size: 2.1rem;
+  }
+
+  .contactDetails__items {
+    width: 65%;
+  }
+
+  .footer__socialMedias {
+    width: 15%;
+  }
+}
+
+@media (max-width: 962px) {
+  * {
+    font-size: 8px;
+  }
+
+  .navbar {
+    padding: 0 3% 0 5%;
+  }
+
+  .navbar__logo {
+    height: 45px;
+  }
+
+  .mobileNav__item {
+    font-size: 2.2rem;
+  }
+
+  .home__title {
+    font-size: 8rem;
+  }
+
+  .home__arrowIcon_right {
+    right: 5%;
+  }
+
+  .home__arrowIcon_left {
+    left: 5%;
+  }
+
+  .promotion {
+    height: 65vh;
+  }
+
+  .promotion__contentImg {
+    width: 120px;
+  }
+
+  .fullMenu {
+    height: 45vh;
+  }
+
+  .sampleProduct__content {
+    width: 51%;
+  }
+
+  .sampleProduct__name {
+    padding-right: 0;
+    font-size: 9rem;
+  }
+
+  .services__itemImg {
+    height: 55px;
+  }
+
+  .services {
+    padding: 0 5%;
+  }
+
+  .services__itemCaption {
+    font-size: 2.5rem;
+  }
+
+  .gallery__title {
+    font-size: 3rem;
+  }
+
+  .gallery__imageOverlay {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+  }
+
+  .gallery__imageOverlayLabel {
+    font-size: 4rem;
+  }
+
+  .blog__content {
+    width: 90%;
+  }
+
+  .contactDetails__items {
+    width: 72.5%;
+  }
+
+  .footer__socialMedias {
+    width: 20%;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .sampleProduct__name {
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 812px) {
+  .reservation {
+    min-height: 350px;
+  }
+
+  .reservation__title {
+    font-size: 3.5rem;
+  }
+
+  .reservation__title_marked {
+    font-size: 5rem;
+  }
+
+  .reservation__content {
+    font-size: 1.8rem;
+  }
+
+  .fullMenu {
+    min-height: 350px;
+  }
+
+  .fullMenu__title {
+    font-size: 3.5rem;
+  }
+
+  .fullMenu__title_marked {
+    font-size: 5rem;
+  }
+
+  .fullMenu__content {
+    font-size: 1.8rem;
+  }
+
+  .blog {
+    min-height: 700px;
+  }
+
+  .blog__title {
+    font-size: 3.5rem;
+  }
+
+  .blog__title_marked {
+    font-size: 5rem;
+  }
+
+  .blog__text {
+    font-size: 1.8rem;
+  }
+
+  .blog__text {
+    margin: 45px 0 30px;
+  }
+}
+
+@media (max-width: 667px) {
+  .home {
+    min-height: 450px;
+  }
+
+  .navbar {
+    height: 75px;
+  }
+
+  .navbar__logo {
+    height: 40px;
+  }
+
+  .mobileNav__item {
+    font-size: 2rem;
+  }
+
+  .home__title {
+    font-size: 7rem;
+  }
+
+  .reservation {
+    padding: 0 10%;
+  }
+
+  .reservation__button {
+    width: 200px;
+    height: 45px;
+  }
+
+  .fullMenu__button {
+    width: 215px;
+    height: 45px;
+  }
+
+  .promotion__contentTitle {
+    font-size: 3.5rem;
+  }
+
+  .promotion__contentImg {
+    width: 110px;
+  }
+
+  .promotion__contentText {
+    font-size: 1.6rem;
+  }
+
+  .sampleProduct__name {
+    font-size: 7rem;
+  }
+
+  .services__itemImg {
+    height: 45px;
+  }
+
+  .services__itemCaption {
+    font-size: 2.2rem;
+  }
+
+  .gallery__title {
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0;
+  }
+
+  .gallery {
+    min-height: 500px;
+  }
+
+  .blog__contentItemCaption {
+    font-size: 1.9rem;
+  }
+
+  .contact {
+    padding: 0 8%;
+  }
+
+  .contactDetails__items {
+    width: 87.5%;
+  }
+
+  .footer__socialMedias {
+    width: 23%;
+  }
+
+  .sampleProduct__name {
+    font-size: 6rem;
+  }
+
+  .sampleProduct__description {
+    font-size: 1.7rem;
+  }
+
+  .sampleProduct__price {
+    font-size: 4rem;
+  }
+
+  .sampleProduct__button {
+    width: 140px;
+    height: 50px;
+  }
+
+  .services__itemCaption {
+    font-size: 1.9rem;
+  }
+
+  .gallery__imageOverlay {
+    width: calc(100% - 35px);
+    height: calc(100% - 35px);
+  }
+
+  .gallery__imageOverlayLabel {
+    font-size: 3.5rem;
+  }
+
+  .blog__content {
+    width: 95%;
+  }
+
+  .blog__contentItem {
+    width: 22%;
+  }
+
+  .contactDetails__itemInfo {
+    padding: 0 7.5%;
+  }
+
+  .footer__socialMedias {
+    width: 27%;
+  }
+}
+
+@media (max-width: 568px) {
+  .home__title {
+    font-size: 6rem;
+  }
+
+  .promotion__contentImg {
+    width: 100px;
+  }
+
+  .promotion__contentText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (orientation: portrait), (max-width: 812px) {
+  .navbar__items {
+    display: none;
+  }
+
+  .navbar .navbar__menuIcon {
+    display: block;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 800px) {
+  * {
+    font-size: 10px;
+  }
+
+  .mobileNav__closeIcon {
+    font-size: 4rem;
+  }
+
+  .mobileNav__item {
+    font-size: 3.5rem;
+  }
+
+  .home {
+    height: 75vh;
+  }
+
+  .home__title {
+    font-size: 7rem;
+  }
+
+  .reservation {
+    height: 45vh;
+  }
+
+  .promotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    min-height: 585px;
+  }
+
+  .promotion__contentTitle {
+    font-size: 3.5rem;
+  }
+
+  .promotion__contentText {
+    font-size: 1.6rem;
+  }
+
+  .fullMenu {
+    height: 35vh;
+  }
+
+  .sampleProduct {
+    height: 60vh;
+  }
+
+  .sampleProduct__name {
+    padding-right: 10%;
+  }
+
+  .services {
+    padding: 0;
+  }
+
+  .services__itemImg {
+    height: 65px;
+  }
+
+  .services__itemCaption {
+    font-size: 2.7rem;
+  }
+
+  .gallery {
+    height: 70vh;
+  }
+
+  .gallery__title {
+    font-size: 3.2rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0;
+  }
+
+  .blog {
+    height: 75vh;
+  }
+
+  .blog__content {
+    width: 95%;
+  }
+
+  .blog__contentItemCaption {
+    top: -40%;
+    font-size: 1.8rem;
+  }
+
+  .contact {
+    height: 70vh;
+    padding: 0 10%;
+  }
+
+  .contactDetails__items {
+    width: 85%;
+  }
+
+  .contactDetails__itemInfo {
+    padding: 0 10%;
+  }
+
+  .location__mapLabel {
+    font-size: 3rem;
+  }
+
+  .footer__title {
+    font-size: 6rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.9rem;
+  }
+
+  .footer__socialMedias {
+    width: 30%;
+  }
+
+  .footer__iconCircle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  .fullMenu {
+    height: 40vh;
+  }
+
+  .sampleProduct__name {
+    font-size: 7rem;
+  }
+
+  .sampleProduct__description {
+    font-size: 1.7rem;
+  }
+
+  .sampleProduct__price {
+    font-size: 4.5rem;
+  }
+
+  .blog__contentItemCaption {
+    top: -50%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 601px) {
+  .navbar .navbar__menuIcon {
+    font-size: 3.5rem;
+  }
+
+  .home__title {
+    font-size: 6rem;
+  }
+
+  .reservation__title {
+    font-size: 2.8rem;
+  }
+
+  .reservation__title_marked {
+    font-size: 4rem;
+  }
+
+  .reservation__content {
+    font-size: 1.6rem;
+  }
+
+  .reservation__buttonLabel {
+    font-size: 1.4rem;
+  }
+
+  .promotion {
+    height: 60vh;
+  }
+
+  .promotion__contentTitle {
+    font-size: 2.5rem;
+  }
+
+  .promotion__contentImg {
+    width: 100px;
+  }
+
+  .promotion__contentText {
+    font-size: 1.4rem;
+  }
+
+  .fullMenu__title {
+    font-size: 3rem;
+  }
+
+  .fullMenu__title_marked {
+    font-size: 4.5rem;
+  }
+
+  .fullMenu__content {
+    padding: 0 10%;
+    font-size: 1.6rem;
+  }
+
+  .sampleProduct__name {
+    font-size: 5rem;
+  }
+
+  .sampleProduct__description {
+    font-size: 1.5rem;
+  }
+
+  .sampleProduct__price {
+    font-size: 4rem;
+  }
+
+  .services__itemImg {
+    height: 45px;
+  }
+
+  .services__itemCaption {
+    font-size: 1.8rem;
+  }
+
+  .gallery__title {
+    font-size: 2.8rem;
+  }
+
+  .gallery__imageOverlayLabel {
+    font-size: 3rem;
+  }
+
+  .blog {
+    height: 85vh;
+  }
+
+  .blog__text {
+    font-size: 1.9rem;
+    padding: 0 10%;
+  }
+
+  .blog__contentItemCaption {
+    font-size: 1.6rem;
+  }
+
+  .blog__contentItemCaption_marked {
+    font-size: 3rem;
+  }
+
+  .contact {
+    justify-content: flex-start;
+    padding: 30px 10% 0;
+  }
+
+  .contact__inputsRow {
+    flex-direction: column;
+  }
+
+  .contact__input_small {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .contact__input_big {
+    height: 200px;
+    margin: 30px 0;
+  }
+
+  .contact__button {
+    height: 60px;
+  }
+
+  .contactDetails__items {
+    width: 90%;
+  }
+
+  .contactDetails__itemInfo {
+    padding: 0 5%;
+  }
+
+  .contactDetails__itemName {
+    font-size: 1.4rem;
+  }
+
+  .contactDetails__itemDetails {
+    font-size: 1.2rem;
+  }
+
+  .location__mapLabel {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+
+  .footer__title {
+    font-size: 5rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.7rem;
+  }
+
+  .footer__iconCircle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer__socialMedias {
+    width: 40%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+  * {
+    font-size: 8px;
+  }
+
+  .reservation {
+    height: 35vh;
+  }
+
+  .reservation__button {
+    width: 180px;
+    height: 35px;
+  }
+
+  .promotion {
+    min-height: 540px;
+  }
+
+  .sampleProduct__name {
+    line-height: 120%;
+  }
+
+  .services {
+    height: 20vh;
+  }
+
+  .services__itemImg {
+    height: 35px;
+  }
+
+  .gallery {
+    height: 55vh;
+  }
+
+  .gallery__imageOverlayLabel {
+    font-size: 2rem;
+    line-height: 175%;
+  }
+
+  .blog {
+    justify-content: flex-start;
+    height: 115vh;
+  }
+
+  .blog__title {
+    margin-top: 10px;
+  }
+
+  .blog__content {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .blog__contentItem {
+    width: 40%;
+  }
+
+  .blog__contentItemCaption {
+    font-size: 1.5rem;
+  }
+
+  .blog__contentItemButton {
+    width: 60px;
+    height: 28px;
+  }
+
+  .blog__contentItemButtonLabel {
+    line-height: 28px;
+  }
+
+  .contactDetails__items {
+    width: 95%;
+  }
+
+  .contactDetails__itemName {
+    text-align: center;
+  }
+
+  .footer__iconCircle {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+  .home__title {
+    font-size: 7rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff,
+      -2px -2px 0 #fff, 0px 2px 0 #fff, 0px -2px 0 #fff, -2px 0px 0 #fff,
+      2px 0px 0 #fff, 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff,
+      -3px -3px 0 #fff, 0px 3px 0 #fff, 0px -3px 0 #fff, -3px 0px 0 #fff,
+      3px 0px 0 #fff, 2px 3px 0 #fff, -2px 3px 0 #fff, 2px -3px 0 #fff,
+      -2px -3px 0 #fff, 3px 2px 0 #fff, -3px 2px 0 #fff, 3px -2px 0 #fff,
+      -3px -1px 0 #fff;
+    text-align: center;
+  }
+
+  .home__arrowIcon {
+    position: absolute;
+    top: 60%;
+    transform: translateY(50%);
+    font-size: 3rem;
+  }
+
+  .reservation {
+    padding: 0 5%;
+  }
+
+  .reservation__title {
+    font-size: 2.6rem;
+  }
+
+  .reservation__title_marked {
+    font-size: 3.6rem;
+  }
+
+  .promotion__contentTitle {
+    padding: 0 7%;
+  }
+
+  .promotion__contentImg {
+    width: 85px;
+    margin: 10px 0;
+  }
+
+  .promotion__contentText {
+    font-size: 1.3rem;
+  }
+
+  .fullMenu__button {
+    width: 200px;
+    height: 38px;
+  }
+
+  .sampleProduct__arrowIcon {
+    font-size: 3rem;
+  }
+
+  .sampleProduct__arrowIcon_left {
+    left: 4%;
+  }
+
+  .sampleProduct__arrowIcon_right {
+    right: 4%;
+  }
+
+  .sampleProduct__button {
+    width: 130px;
+    height: 45px;
+  }
+
+  .services__itemImg {
+    height: 28px;
+  }
+
+  .services__divider {
+    display: none;
+  }
+
+  .services__itemCaption {
+    font-size: 1.6rem;
+  }
+
+  .gallery {
+    min-height: 460px;
+  }
+
+  .gallery__title {
+    font-size: 2.3rem;
+  }
+
+  .gallery__imageOverlay {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+  }
+
+  .blog__title {
+    margin-top: 10px;
+  }
+
+  .blog__text {
+    margin: 35px 0 0;
+  }
+
+  .contactDetails {
+    height: 80vh;
+  }
+
+  .contactDetails__items {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .contactDetails__item {
+    height: 25%;
+    width: 70%;
+  }
+
+  .contactDetails__itemName {
+    margin-bottom: 10px;
+  }
+
+  .contactDetails__itemIcon {
+    font-size: 4rem;
+  }
+
+  .footer__socialMedias {
+    width: 45%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 375px) and (max-height: 667px) {
+  .blog {
+    height: 140vh;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+  .blog__content {
+    min-height: 300px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 320px) {
+  .home__title {
+    font-size: 6rem;
+  }
+
+  .mobileNav__item {
+    font-size: 2.5rem;
+  }
+
+  .reservation__title {
+    font-size: 2.4rem;
+  }
+
+  .reservation__title_marked {
+    font-size: 3.2rem;
+  }
+
+  .blog {
+    height: 160vh;
+  }
+
+  .contactDetails__item {
+    height: 30%;
+    width: 70%;
+  }
+
+  .contactDetails__itemDetails {
+    font-size: 1.1rem;
+  }
+
+  .footer__socialMedias {
+    width: 55%;
+  }
+
+  .location__mapLabel_marked {
+    width: 42px;
+    height: 42px;
+  }
+
+  .location__mapLabel {
+    width: 100%;
+    font-size: 2rem;
+  }
+}

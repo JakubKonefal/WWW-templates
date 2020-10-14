@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/693d26255e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mr+Dafoe&family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img class="navbar__logo" src="./assets/logo.png" alt="logo" />
+      <div class="navbar__items">
+        <span class="navbar__item">home</span>
+        <span class="navbar__item">reservation</span>
+        <span class="navbar__item">menu</span>
+        <span class="navbar__item">shop</span>
+        <span class="navbar__item">features</span>
+        <span class="navbar__item">blog</span>
+        <span class="navbar__item">contact us</span>
+      </div>
+      <span class="navbar__menuIcon fa fa-bars" aria-hidden="true"></span>
+    </nav>
+    <nav class="mobileNav">
+      <span class="mobileNav__closeIcon fas fa-times" aria-hidden="true" ></span>
+      <span class="mobileNav__item">home</span>
+      <span class="mobileNav__item">reservation</span>
+      <span class="mobileNav__item">menu</span>
+      <span class="mobileNav__item">shop</span>
+      <span class="mobileNav__item">features</span>
+      <span class="mobileNav__item">blog</span>
+      <span class="mobileNav__item">contact us</span>
+    </nav>
+    <section class="home navigable">
+      <h1 class="home__title">Taste on Our hands!</h1>
+      <h1 class="home__subtitle">- welcome -</h1>
+      <span
+        class="home__arrowIcon home__arrowIcon_right fa fa-chevron-right"
+        aria-hidden="true"
+      ></span>
+      <span
+        class="home__arrowIcon home__arrowIcon_left fa fa-chevron-left"
+        aria-hidden="true"
+      ></span>
+    </section>
+    <section class="reservation navigable">
+      <h2 class="reservation__title">
+        welcome to our <mark class="reservation__title_marked">top</mark>
+      </h2>
+      <p class="reservation__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, illo
+        vero? Sed eligendi, dignissimos qui alias, voluptates ratione,
+        consectetur fugiat blanditiis doloremque harum odit maxime est nobis
+        reiciendis impedit ex! Iste hic ipsa repudiandae numquam corporis omnis
+        possimus pariatur tempora optio, dignissimos laborum quasi repellat!
+      </p>
+      <button class="reservation__button">
+        <span class="reservation__buttonLabel">make a reservation</span>
+      </button>
+    </section>
+    <section class="promotion">
+      <div class="promotion__img"></div>
+      <div class="promotion__content">
+        <h3 class="promotion__contentTitle">
+          make every cooking time a special moment
+        </h3>
+        <img
+          class="promotion__contentImg"
+          src="./assets/promo__content.png"
+          src="pot"
+        />
+        <p class="promotion__contentText">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
+          voluptates magnam incidunt repellendus repellat at, odio quas iure,
+          hic consequuntur aperiam dignissimos, numquam magni saepe sit debitis
+          voluptatum perferendis aliquam? Alias voluptatibus ratione possimus
+          error?
+        </p>
+      </div>
+    </section>
+    <section class="fullMenu navigable">
+      <h3 class="fullMenu__title">
+        our <mark class="fullMenu__title_marked"> baking </mark>
+      </h3>
+      <p class="fullMenu__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+        dolore, odio ab qui minima incidunt, at est cum culpa harum iste
+        doloribus corrupti odit sequi, commodi fugit hic sapiente? Repudiandae
+        non et a aspernatur aliquam facere consequuntur corporis quo error.
+      </p>
+      <button class="fullMenu__button">
+        <span class="fullMenu__buttonLabel">view full menu</span>
+      </button>
+    </section>
+    <section class="sampleProduct navigable">
+      <div class="sampleProduct__content">
+        <h3 class="sampleProduct__name">The Lemon Cake</h3>
+        <p class="sampleProduct__description">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
+          excepturi, iste velit ipsam blanditiis mollitia expedita veritatis
+          reprehenderit porro, quos eum doloribus maxime totam id.
+        </p>
+        <span class="sampleProduct__price">$15.00</span>
+        <button class="sampleProduct__button">
+          <span class="sampleProduct__buttonLabel"> view all </span>
+        </button>
+      </div>
+
+      <span
+        class="sampleProduct__arrowIcon sampleProduct__arrowIcon_right fa fa-chevron-right"
+        aria-hidden="true"
+      ></span>
+      <span
+        class="sampleProduct__arrowIcon sampleProduct__arrowIcon_left fa fa-chevron-left"
+        aria-hidden="true"
+      ></span>
+    </section>
+    <section class="services navigable">
+      <figure class="services__item">
+        <img
+          class="services__itemImg"
+          src="./assets/shopping-cart.png"
+          alt="shopping-cart"
+        />
+        <figcaption class="services__itemCaption">online shopping</figcaption>
+      </figure>
+      <div class="services__divider"></div>
+      <figure class="services__item">
+        <img class="services__itemImg services__itemImg_2" src="./assets/car.png" alt="car" />
+        <figcaption class="services__itemCaption">free ship</figcaption>
+      </figure>
+      <div class="services__divider"></div>
+      <figure class="services__item">
+        <img
+          class="services__itemImg"
+          src="./assets/thumb-up.png"
+          alt="thumb-up"
+        />
+        <figcaption class="services__itemCaption">quality products</figcaption>
+      </figure>
+    </section>
+    <section class="gallery">
+      <div class="gallery__row gallery__row_first">
+        <figure class="gallery__imgField gallery__imgField_1"></figure>
+        <div class="gallery__imgField gallery__imgField_2">
+          <h3 class="gallery__title">gallery</h3>
+        </div>
+        <div class="gallery__imgField gallery__imgField_3"></div>
+      </div>
+      <div class="gallery__row gallery__row_second">
+        <figure class="gallery__imgField gallery__imgField_4"></figure>
+        <figure class="gallery__imgField gallery__imgField_5">
+          <div class="gallery__imageOverlay" >
+            <span class="gallery__imageOverlayLabel"> the </br> cake </br> blah </br> - </span>
+          </div>
+        </figure>
+        <figure class="gallery__imgField gallery__imgField_6"></figure>
+      </div>
+    </section>
+    <section class="blog navigable">
+      <h3 class="blog__title">Our <mark class="blog__title_marked" >Blog</mark></h3>
+      <p class="blog__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quaerat fugit iste quae voluptatem qui ab quod sint, vel numquam nobis distinctio obcaecati aperiam temporibus officia quibusdam voluptate dolores nesciunt, cum, illum maiores praesentium assumenda. </p>
+      <div class="blog__content" >
+        <figure class="blog__contentItem" >
+          <figcaption class="blog__contentItemCaption">how to make </br> <mark class="blog__contentItemCaption_marked">theFood</mark> <button class="blog__contentItemButton"> <span class="blog__contentItemButtonLabel" >view</span> </button> </figcaption>
+        </figure>
+        <figure class="blog__contentItem" >
+          <figcaption class="blog__contentItemCaption">how to make </br> <mark class="blog__contentItemCaption_marked">theFood</mark> <button class="blog__contentItemButton"> <span class="blog__contentItemButtonLabel" >view</span> </button> </figcaption>
+        </figure>
+        <figure class="blog__contentItem" >
+          <figcaption class="blog__contentItemCaption">how to make </br> <mark class="blog__contentItemCaption_marked">theFood</mark> <button class="blog__contentItemButton"> <span class="blog__contentItemButtonLabel" >view</span> </button> </figcaption>
+        </figure>
+        <figure class="blog__contentItem" >
+          <figcaption class="blog__contentItemCaption">how to make </br> <mark class="blog__contentItemCaption_marked">theFood</mark> <button class="blog__contentItemButton"> <span class="blog__contentItemButtonLabel" >view</span> </button> </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="contact navigable" >
+      <h3 class="contact__title"> Contact <mark class="contact__title_marked" > Us </mark> </h3>
+      <form class="contact__form" > 
+        <div class="contact__inputsRow">
+          <input class="contact__input contact__input_small" type="text" placeholder="Your name" />
+          <input class="contact__input contact__input_small" type="email" placeholder="Email address" />
+          <input class="contact__input contact__input_small" type="text" placeholder="Subject" />
+        </div>
+        <textarea class="contact__input contact__input_big" type="text"></textarea>
+        <button class="contact__button" type="submit" > <span class="contact__buttonLabel" >submit now</span> </button>
+      </form>
+    </section>
+    <section class="contactDetails">
+      <div class="contactDetails__items" >
+        <div class="contactDetails__item">
+          <figure class="contacDetails__itemPhoto" >
+              <img class="contactDetails__itemImg" src="./assets/contact-details-1.png" alt="email"/>
+              <span class="contactDetails__itemIcon far fa-envelope" aria-hidden="true" ></span>
+          </figure>
+          <div class="contactDetails__itemInfo">
+            <h6 class="contactDetails__itemName">email</h6>
+            <span class="contactDetails__itemDetails"> top@blah.com </span>
+          </div>
+        </div>
+        <div class="contactDetails__item">
+          <figure class="contacDetails__itemPhoto" >
+              <img class="contactDetails__itemImg" src="./assets/contact-details-2.png" alt="location"/>
+              <span class="contactDetails__itemIcon fas fa-map-marker-alt" aria-hidden="true" ></span>
+          </figure>
+          <div class="contactDetails__itemInfo">
+            <h6 class="contactDetails__itemName">our restaurant</h6>
+            <span class="contactDetails__itemDetails"> 431-nguyen khang ha noi-viet nam </span>
+          </div>
+        </div>
+        <div class="contactDetails__item">
+          <figure class="contacDetails__itemPhoto" >
+              <img class="contactDetails__itemImg" src="./assets/contact-details-3.png" alt="phone"/>
+              <span class="contactDetails__itemIcon fas fa-phone" aria-hidden="true" ></span>
+          </figure>
+          <div class="contactDetails__itemInfo">
+            <h6 class="contactDetails__itemName">phone</h6>
+            <span class="contactDetails__itemDetails"> (+84) - 797-6809 </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="location" >
+      <div class="location__mapOverlay">
+
+      </div>
+      <span class="location__mapLabel">find <mark class="location__mapLabel_marked" >top</mark> on the map</span>
+      <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5343.249192691942!2d108.26200187098408!3d12.910363118318958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1593267280905!5m2!1spl!2spl" frameborder="0" ></iframe>
+    </section>
+    <footer class="footer">
+      <h3 class="footer__title"> Top </h3>
+      <span class="footer__copyright"> Copyright 2016. All rights reserverd </span>
+      <div class="footer__socialMedias">
+        <a class="footer__iconCircle" href="https://www.fcbarca.com/">
+            <span class="footer__icon fa fa-facebook-f" aria-hidden="true" ></span>
+        </a>
+        <a class="footer__iconCircle" href="https://www.fcbarca.com/">
+            <span class="footer__icon fab fa-twitter" aria-hidden="true" ></span>
+        </a>
+        <a class="footer__iconCircle" href="https://www.fcbarca.com/">
+            <span class="footer__icon fab fa-linkedin-in" aria-hidden="true" ></span>
+        </a>
+        <a class="footer__iconCircle" href="https://www.fcbarca.com/">
+            <span class="footer__icon fab fa-instagram" aria-hidden="true" ></span>
+        </a>
+        <a class="footer__iconCircle" href="https://www.fcbarca.com/">
+            <span class="footer__icon fab fa-vimeo-v" aria-hidden="true" ></span>
+        </a>
+        </div>
+    </footer>
+    <script src="main.js" ></script>
+  </body>
+</html>
